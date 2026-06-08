@@ -1,0 +1,13 @@
+{
+  "name": "remote-browser-control",
+  "version": "1.0.0",
+  "description": "Mini TeamViewer for browsers — BLD SDE Intern Assignment",
+  "scripts": {
+    "install:all": "cd server && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"cd server && npm start\" \"cd frontend && npm start\"",
+    "start": "concurrently \"cd server && npm start\" \"cd frontend && npm start\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

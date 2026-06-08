@@ -102,7 +102,9 @@ function App() {
       <header className="header">
         <div className="header-left">
           <div className="logo">
-            <span className="logo-icon">◈</span>
+            <span className="logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </span>
             <span className="logo-text">RemoteBrowser</span>
           </div>
           <div className={`status-badge ${status.running ? 'running' : 'stopped'}`}>
@@ -127,7 +129,9 @@ function App() {
       {status.running && (
         <div className="urlbar">
           <form onSubmit={handleNavigate} className="urlbar-form">
-            <span className="urlbar-icon">🌐</span>
+            <span className="urlbar-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </span>
             <input
               className="urlbar-input"
               type="text"
@@ -147,14 +151,16 @@ function App() {
           {!status.running && !loading && (
             <div className="idle-screen">
               <div className="idle-content">
-                <div className="idle-icon">◈</div>
+                <div className="idle-icon">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
                 <h2>Remote Browser Control</h2>
                 <p>Click <strong>Start Browser</strong> to spin up a Dockerized Chromium instance and stream it here.</p>
                 <ul className="feature-list">
-                  <li>🐳 Docker-isolated Chromium</li>
-                  <li>📺 Real-time VNC stream via noVNC</li>
-                  <li>🖱️ Full click, scroll & type support</li>
-                  <li>🌐 Remote URL navigation</li>
+                  <li><span>⚡</span> Docker-isolated Chromium</li>
+                  <li><span>📺</span> Real-time VNC stream via noVNC</li>
+                  <li><span>🖱️</span> Full click, scroll & type support</li>
+                  <li><span>🌐</span> Remote URL navigation</li>
                 </ul>
               </div>
             </div>
@@ -172,7 +178,10 @@ function App() {
           {status.running && !loading && (
             <div className="vnc-wrapper">
               <div className="vnc-label">
-                <span>🖥️ Live Browser Stream — interact directly in the frame below</span>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                  Live Browser Stream — interact directly in the frame below
+                </span>
                 <a href={NOVNC_URL} target="_blank" rel="noreferrer" className="open-tab-btn">Open in new tab ↗</a>
               </div>
               <iframe

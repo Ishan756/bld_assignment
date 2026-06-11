@@ -1,11 +1,11 @@
-# 🌐 Remote Browser Control System
+#  Remote Browser Control System
 ### BLD SDE Intern Assignment
 
 A mini TeamViewer for browsers. Spin up a Dockerized headless Chromium, stream it to a web UI, and control it fully — click, scroll, type — all from your browser.
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -38,7 +38,7 @@ A mini TeamViewer for browsers. Spin up a Dockerized headless Chromium, stream i
 
 ---
 
-## ✅ Prerequisites
+##  Prerequisites
 
 Make sure these are installed before running:
 
@@ -50,7 +50,7 @@ Make sure these are installed before running:
 
 ---
 
-## 🚀 Setup & Run Commands
+##  Setup & Run Commands
 
 ### Step 1 — Clone / Download the project
 ```bash
